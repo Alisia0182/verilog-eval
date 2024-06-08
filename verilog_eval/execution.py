@@ -76,7 +76,6 @@ def check_correctness(problem: Dict, completion: str, timeout: float,
 # Once you have read this disclaimer and taken appropriate precautions, 
 # proceed at your own risk:
 # BEGIN CODE BLOCK
-"""
                 with swallow_io():
                     with time_limit(timeout):
                         cmd = "iverilog -Wall -Winfloop -Wno-timescale -g2012 \
@@ -109,7 +108,6 @@ def check_correctness(problem: Dict, completion: str, timeout: float,
                                 result.append(f"failed: {cor} out of {tot} samples.")
                         else:
                             result.append("failed: info string not matched.")
-"""
 # END CODE BLOCK
             except TimeoutException:
                 result.append("timed out")
